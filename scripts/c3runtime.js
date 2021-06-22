@@ -3653,9 +3653,9 @@ value:this._waitTime,onedit:v=>this._waitTime=v},{name:prefix+".properties.fade-
 		C3.Behaviors.DragnDrop.Acts.SetEnabled,
 		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.LocalStorage.Acts.SetItem,
+		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.VKBridge.Acts.LeaderSave,
 		C3.Plugins.System.Acts.NextPrevLayout,
-		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.VKBridge.Acts.AdsMobile,
 		C3.Plugins.VKBridge.Acts.ShowAds,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
@@ -3672,11 +3672,8 @@ value:this._waitTime,onedit:v=>this._waitTime=v},{name:prefix+".properties.fade-
 		C3.Plugins.VKBridge.Acts.ShowInvite,
 		C3.Plugins.VKBridge.Acts.LeaderBoardVKUI,
 		C3.Plugins.VKBridge.Acts.ShowWall,
-		C3.Plugins.VKBridge.Acts.BridgeConnect,
 		C3.Plugins.Audio.Cnds.IsAnyPlaying,
 		C3.Plugins.Touch.Cnds.OnTouchStart,
-		C3.Plugins.VKBridge.Cnds.BridgeConnectSuccess,
-		C3.Plugins.VKBridge.Acts.Authorization,
 		C3.Plugins.Mouse.Cnds.OnClick,
 		C3.Plugins.LocalStorage.Acts.CheckItemExists,
 		C3.Plugins.Text.Acts.SetBoolInstanceVar,
@@ -3685,7 +3682,9 @@ value:this._waitTime,onedit:v=>this._waitTime=v},{name:prefix+".properties.fade-
 		C3.Plugins.LocalStorage.Exps.ItemValue,
 		C3.Plugins.LocalStorage.Cnds.OnItemMissing,
 		C3.Plugins.Text.Cnds.IsBoolInstanceVarSet,
-		C3.Plugins.System.Acts.GoToLayoutByName
+		C3.Plugins.System.Acts.GoToLayoutByName,
+		C3.Plugins.VKBridge.Acts.BridgeConnect,
+		C3.Plugins.System.Cnds.CompareTime
 		];
 	};
 	self.C3_JsPropNameTable = [
@@ -3946,7 +3945,8 @@ value:this._waitTime,onedit:v=>this._waitTime=v},{name:prefix+".properties.fade-
 		p => {
 			const n0 = p._GetNode(0);
 			return () => and("Level ", n0.ExpInstVar());
-		}
+		},
+		() => 0.25
 	];
 }
 
