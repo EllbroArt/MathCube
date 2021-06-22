@@ -3684,7 +3684,10 @@ value:this._waitTime,onedit:v=>this._waitTime=v},{name:prefix+".properties.fade-
 		C3.Plugins.Text.Cnds.IsBoolInstanceVarSet,
 		C3.Plugins.System.Acts.GoToLayoutByName,
 		C3.Plugins.VKBridge.Acts.BridgeConnect,
-		C3.Plugins.System.Cnds.CompareTime
+		C3.Plugins.System.Cnds.CompareTime,
+		C3.Plugins.VKBridge.Cnds.BridgeConnectSuccess,
+		C3.Plugins.VKBridge.Acts.Authorization,
+		C3.Plugins.VKBridge.Acts.AppGetClient
 		];
 	};
 	self.C3_JsPropNameTable = [
